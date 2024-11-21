@@ -4,10 +4,11 @@ public class Main {
     }
 
     public static String operationSystem(int year, int OS) {
+        int clientDeviceYear = year;
         int currentYear = 2015;
         String[][] answers = {
-                {"Установите облегченную версию приложения для iOS по ссылке", "Установите версию приложения для iOS по ссылке"},
-                {"Установите облегченную версию приложения для Android по ссылке", "Установите версию приложения для Android по ссылке"}
+                { "Год выпуска вашего устройства " + clientDeviceYear + ", установите облегченную версию приложения для iOS по ссылке", "Установите версию приложения для iOS по ссылке"},
+                { "Год выпуска вашнго устройства" + clientDeviceYear + ", установите облегченную версию приложения для Android по ссылке", "Установите версию приложения для Android по ссылке"}
         };
         return answers[OS][currentYear > year ? 0 : 1];
     }
@@ -30,7 +31,7 @@ public class Main {
         System.out.println("Год " + year + " является високосным: " + isLeapYear(year));
 
         System.out.println("\nЗадание 2");
-        System.out.println(operationSystem(2019, 1));
+        System.out.println(operationSystem(2014, 0));
 
         System.out.println("\nЗадание 3");
         int deliveryDistance = 95;
